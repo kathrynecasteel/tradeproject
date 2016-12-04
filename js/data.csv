@@ -1,19 +1,52 @@
-food_group,supply_b_pounds,loss_retail_b_pounds,loss_retail_percent,loss_consumer_b_pounds,loss_consumer_percent
-Grain products,60.4,7.2,12,11.3,19
-Fruit,64.3,6,9,12.5,19
-Fresh,37.6,4.4,12,9.5,25
-Processed,26.7,1.6,6,2.9,11
-Vegetables,83.9,7,8,18.2,22
-Fresh,53.5,5.2,10,12.8,24
-Processed,30.4,1.8,6,5.3,18
-Dairy products,83,9.3,11,16.2,20
-Fluid milk,53.8,6.5,12,10.5,20
-Other dairy products,29.1,2.8,10,5.7,19
-"Meat, poultry, and fish",58.4,2.7,5,12.7,22
-Meat,31.6,1.4,4,7.2,23
-Poultry,22,0.9,4,3.9,18
-Fish and seafood,4.8,0.4,8,1.5,31
-Eggs,9.8,0.7,7,2.1,21
-Tree nuts and peanuts,3.5,0.2,6,0.3,9
-Added sugar and sweeteners,40.8,4.5,11,12.3,30
-Added fats and oils,26,5.4,21,4.5,17
+state,percent_vote,petitions
+Alabama,62.08,647
+Alaska,51.28,144
+Arizona,48.1,275
+Arkansas,60.57,461
+California,31.68,1843
+Colorado,43.25,477
+Connecticut,40.93,483
+D.C.,4.09,8
+Delaware,41.92,25
+Florida,48.64,428
+Georgia,50.51,848
+Hawaii,30.05,18
+Idaho,59.25,199
+Illinois,38.52,975
+Indiana,56.82,723
+Iowa,51.15,275
+Kansas,56.65,231
+Kentucky,62.52,550
+Louisiana,58.09,261
+Maine,45.15,408
+Maryland,33.92,190
+Massachusetts,32.81,806
+Michigan,47.5,1390
+Minnesota,44.92,532
+Mississippi,57.86,425
+Missouri,57.11,607
+Montana,56.47,146
+Nebraska,59.94,106
+Nevada,45.5,73
+New Hampshire,46.47,144
+New Jersey,41.03,876
+New Mexico,40.04,157
+New York,37.11,1614
+North Carolina,49.83,2236
+North Dakota,62.96,74
+Ohio,51.31,1321
+Oklahoma,65.32,360
+Oregon,39.12,700
+Pennsylvania,48.23,2442
+Rhode Island,38.9,204
+South Carolina ,54.94,733
+South Dakota,61.53,38
+Tennessee,61.07,1087
+Texas,52.23,1735
+Utah,45.14,162
+Vermont,30.27,111
+Virginia,44.43,650
+Washington,37.08,582
+West Virginia,67.86,213
+Wisconsin,47.19,862
+Wyoming,68.17,89
