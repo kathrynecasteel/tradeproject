@@ -1,9 +1,18 @@
 $(document).ready(function(){
 
 	// set the specs
-<<<<<<< HEAD
-	var width = 900;
-	var height = 450;
+	var width = 700;
+	var height = 600;
+	var marginLeft = 50; 
+	var marginRight; 
+	var marginTop; 
+	var marginBottom = 320;
+
+	var div = d3.select("body")
+		.append("div")
+		.attr("class","tooltip")
+		.style("opacity",0);
+
 
 	// create SVG element
 	var svg = d3.select("#chart")
@@ -11,37 +20,73 @@ $(document).ready(function(){
 	            .attr("width", width)
 	            .attr("height", height);
 
-	
-	// loading data
-	var data = d3.csv("js/data.csv", function(error, data) {
-
-		// define the newly transformed data set (from csv into a data object)
-		foodWasteData = data; 
-
-		// make a rectangle for each data point, giving each rectangle an x-coordinate, a y-coordinate, a width and a height (optional, give it a fill)
-	   	
-
-	});
-
-=======
-	
-	// create SVG element
 
 	// define your scales
+	var xScale = d3.scaleLinear()
+			// determine min and max data value
+			.domain ([0,100])
+			//deter where in pixels your graphic starts and ends
+			.range([marginLeft,width-marginLeft])
+
+	var yScale = d3.scaleLinear()
+			.domain ([0,2500])
+			.range([height-marginBottom,20])
 
 	// define your axes
 
+	var xAxis = d3.axisBottom(xScale)
+				.ticks(8);
+	var yAxis = d3.axisLeft(yScale)
+				.tickFormat(function(d,i){
+					return d ;
+				})
+				.ticks(5)
+
 	// create your axes
+	// xAxis
+	svg.append("g")
+		.attr("transform","translate(0," + (height-marginBottom) + ")")
+		.call(xAxis);
+
+	//yAxis
+	svg.append("g")
+		.attr("transform", "translate("+marginLeft +",0)")
+		.call(yAxis);
+
+	//loading data
+
+	svg.selectAll("circle")
+		.data(stateData)
+		.enter()
+		.append("circle")
+
+			//animations later and transitions 
+			.on("mouseover",function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div .html(d.state);
+			})
+
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			})
 
 
-	// make a circle for each data point
-		// give each circle a cx-coordinate
-		// a y-coordinate
-		// a radius (extra: if you're done early, make the radius represent another value you're plotting)
-	   	
->>>>>>> d811b07a373c09e8d0ccccaabfbf47c5efb15023
+			.attr("cx",function(d){
+				return xScale(d.percent_vote);
+			})
+			.attr("cy",function(d){
+				return yScale(d.petitions);
+			})
+			.attr("r",function(d,i){
+				return 5
+			})
+			.attr("fill","teal")
+			.attr("opacity",0.7);
 
-	
 
 
 });
