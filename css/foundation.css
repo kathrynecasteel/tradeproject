@@ -3329,7 +3329,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .tooltip {
   background-color: #0a0a0a;
-  color: #fefefe;
+  color: #000000;
   font-size: 80%;
   padding: 0.75rem;
   position: absolute;

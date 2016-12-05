@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var marginTop; 
 	var marginBottom = 320;
 
-	var div = d3.select("body")
+	var div = d3.select("#chart")
 		.append("div")
 		.attr("class","tooltip")
 		.style("opacity",0);
@@ -65,7 +65,9 @@ $(document).ready(function(){
 				div.transition()
 					.duration(200)
 					.style("opacity", .9);
-				div .html(d.state);
+				div .html(d.state)
+					.style("left", (d3.event.pageX) + "px")		
+                	.style("top", (d3.event.pageY - 28) + "px");	
 			})
 
 			.on("mouseout", function(d){
@@ -82,9 +84,12 @@ $(document).ready(function(){
 				return yScale(d.petitions);
 			})
 			.attr("r",function(d,i){
-				return 5
+				return 7
 			})
-			.attr("fill","teal")
+			.attr("fill", function(d){
+				if (d.win == "TRUE") {return "red"}
+				else {return "blue"}
+			;})
 			.attr("opacity",0.7);
 
 
