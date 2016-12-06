@@ -32,6 +32,14 @@ $(document).ready(function(){
 			.domain ([0,2500])
 			.range([height-marginBottom,20])
 
+	// adding swoopy
+	var swoopy = d3.swoopyDrag()
+		.x(function(d){ return xScale(d.xVal) })
+		.y(function(d){ return yScale(d.yVal) })
+		.draggable(true)
+		.annotations(annotations)
+
+
 	// define your axes
 
 	var xAxis = d3.axisBottom(xScale)
@@ -41,6 +49,7 @@ $(document).ready(function(){
 					return d ;
 				})
 				.ticks(5)
+
 
 	// create your axes
 	// xAxis
@@ -91,6 +100,11 @@ $(document).ready(function(){
 				else {return "blue"}
 			;})
 			.attr("opacity",0.7);
+
+			// add swoop
+			// var swoopSel = svg.append('g')
+			// 	.attr('class','annotations')
+			// 	.call(swoopy)
 
 
 
