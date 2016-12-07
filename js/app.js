@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	// set the specs
 	var width = 700;
-	var height = 600;
-	var marginLeft = 50; 
+	var height = 500;
+	var marginLeft = 70; 
 	var marginRight; 
 	var marginTop; 
-	var marginBottom = 320;
+	var marginBottom = 100;
 
 	var div = d3.select("#chart")
 		.append("div")
@@ -63,6 +63,22 @@ $(document).ready(function(){
 		.call(yAxis);
 
 	//loading data
+
+	svg.append("text")
+    	.attr("class", "x label")
+    	.attr("text-anchor", "end")
+    	.attr("x", width)
+    	.attr("y", height - 7)
+   		 .text("Percent vote Republican");
+
+   	svg.append("text")
+    	.attr("class", "y label")
+   	 	.attr("text-anchor", "end")
+    	.attr("y", 10)
+    	.attr("dy", ".75em")
+    	.attr("transform", "rotate(-90)")
+    	.text("Jobs effected by trade");
+
 
 	svg.selectAll("circle")
 		.data(stateData)
