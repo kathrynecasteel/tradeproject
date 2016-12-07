@@ -69,11 +69,11 @@ $(document).ready(function(){
     	.attr("text-anchor", "end")
     	.attr("x", width)
     	.attr("y", height - 7)
-   		 .text("Percent vote Republican");
+   	.text("Percent vote Republican");
 
    	svg.append("text")
     	.attr("class", "y label")
-   	 	.attr("text-anchor", "end")
+   	.attr("text-anchor", "end")
     	.attr("y", 10)
     	.attr("dy", ".75em")
     	.attr("transform", "rotate(-90)")
