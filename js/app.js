@@ -78,7 +78,7 @@ $(document).ready(function(){
     	.attr("dy", ".75em")
     	.attr("transform", "rotate(-90)")
     	.text("Jobs effected by trade");
-
+   //change 
 
 	svg.selectAll("circle")
 		.data(stateData)
