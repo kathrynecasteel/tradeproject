@@ -3,10 +3,10 @@ $(document).ready(function(){
 	// set the specs
 	var width = 700;
 	var height = 600;
-	var marginLeft = 50; 
+	var marginLeft = 70; 
 	var marginRight; 
 	var marginTop; 
-	var marginBottom = 320;
+	var marginBottom = 100;
 
 	var div = d3.select("#chart")
 		.append("div")
@@ -61,6 +61,22 @@ $(document).ready(function(){
 	svg.append("g")
 		.attr("transform", "translate("+marginLeft +",0)")
 		.call(yAxis);
+
+	svg.append("text")
+   		.attr("class", "x label")
+    	.attr("text-anchor", "end")
+    	.attr("x", width)
+    	.attr("y", height - 6)
+    	.text("Percent Vote Republican");
+
+    svg.append("text")
+    	.attr("class", "y label")
+    	.attr("text-anchor", "end")
+    	.attr("y", 6)
+    	.attr("dy", ".75em")
+    	.attr("transform", "rotate(-90)")
+    	.text("Jobs Lost to Trade");
+
 
 	//loading data
 
