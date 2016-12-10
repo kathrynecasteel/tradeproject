@@ -32,13 +32,6 @@ $(document).ready(function(){
 			.domain ([0,2500])
 			.range([height-marginBottom,20])
 
-	// adding swoopy
-	var swoopy = d3.swoopyDrag()
-		.x(function(d){ return xScale(d.xVal) })
-		.y(function(d){ return yScale(d.yVal) })
-		.draggable(true)
-		.annotations(annotations)
-
 
 	// define your axes
 
@@ -69,9 +62,11 @@ $(document).ready(function(){
 	svg.append("text")
    		.attr("class", "x label")
     	.attr("text-anchor", "end")
-    	.attr("x", width - 250)
+		.attr("x", width - 250)
     	.attr("y", height - 6)
     	.text("Percent vote Republican");
+
+
 
     svg.append("text")
     	.attr("class", "y label")
@@ -121,10 +116,6 @@ $(document).ready(function(){
 			;})
 			.attr("opacity",0.7);
 
-			// add swoop
-			// var swoopSel = svg.append('g')
-			// 	.attr('class','annotations')
-			// 	.call(swoopy)
 
 
 
