@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var marginLeft = 70; 
 	var marginRight; 
 	var marginTop; 
-	var marginBottom = 100;
+	var marginBottom = 60;
 
 	var div = d3.select("#chart")
 		.append("div")
@@ -43,7 +43,11 @@ $(document).ready(function(){
 	// define your axes
 
 	var xAxis = d3.axisBottom(xScale)
+				.tickFormat(function(d,i){
+					return d + "%";
+				})
 				.ticks(8);
+
 	var yAxis = d3.axisLeft(yScale)
 				.tickFormat(function(d,i){
 					return d ;
@@ -62,23 +66,23 @@ $(document).ready(function(){
 		.attr("transform", "translate("+marginLeft +",0)")
 		.call(yAxis);
 
-	//loading data
-
 	svg.append("text")
-    	.attr("class", "x label")
+   		.attr("class", "x label")
     	.attr("text-anchor", "end")
-    	.attr("x", width)
-    	.attr("y", height - 7)
-   		 .text("Percent vote Republican");
+    	.attr("x", width - 250)
+    	.attr("y", height - 6)
+    	.text("Percent vote Republican");
 
-   	svg.append("text")
+    svg.append("text")
     	.attr("class", "y label")
-   	 	.attr("text-anchor", "end")
+    	.attr("text-anchor", "end")
     	.attr("y", 10)
-    	.attr("dy", ".75em")
+    	.attr("x", -150)
     	.attr("transform", "rotate(-90)")
-    	.text("Jobs effected by trade");
-   //change 
+    	.text("Jobs lost to trade");
+
+
+	//loading data
 
 	svg.selectAll("circle")
 		.data(stateData)

@@ -3320,13 +3320,13 @@ table.hover tr:nth-of-type(even):hover {
     background: #8a8a8a;
     box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; }
 
-.has-tip {
+/*.has-tip {
   border-bottom: dotted 1px #8a8a8a;
   font-weight: bold;
   position: relative;
-  display: inline-block;
+  display: none;
   cursor: help; }
-
+*/
 .tooltip {
   background-color: #0a0a0a;
   color: #000000;

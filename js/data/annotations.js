@@ -1,14 +1,14 @@
 		// make annotations
 	var annotations = [
   {
-    "xVal": 5,
-    "yVal": 5,
-    "path": "M-67,-265,84,-208L144,-253",
-    "text": "Label 1",
+    "xVal": 4.4,
+    "yVal": 5.7,
+    "path": "M-49,-61L-2,-3",
+    "text": "hello",
     "textOffset": [
-      -114,
-      -262
-    ]
+      -59,
+      -67
+    [
   },
   {
     "xVal": 7,
@@ -20,4 +20,4 @@
       89
     ]
   }
-]
+]s

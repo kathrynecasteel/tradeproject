@@ -77,6 +77,72 @@ h1, h2, h3, h4, h5, h6{
 
 /*app specific*/
 
+h1{
+  font-size: 2em;
+  color:#37424A;
+  line-height: 2em;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+h2{
+  font-size: 1.2em;
+  line-height: 2em;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+h3{
+  font-size:1.2em;
+  line-height: 2em;
+  font-weight:bold;
+}
+
+
+a {
+    color: #b84ab4;
+    text-decoration: none;
+}
+
+.first-graph:first-letter { 
+  float: left; 
+  color: #37424A; 
+  font-size: 2.5em; 
+  line-height: 1em; 
+  padding-top: 4px; 
+  padding-right: 10px; 
+  padding-left: 3px; 
+  font-family: Georgia, serif; 
+}
+
+
+ p{
+    font-family:  Garamond, serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #393939;
+    padding-bottom: .05em;
+
+}
+
+.wrap{
+  position: absolute;
+  width:100%;
+}
+
+
+.content{
+  width:100%;
+  margin:0 auto;
+  max-width:600px;
+  text-align: justify;
+  padding-bottom:15px;
+  padding-top:15px;
+}
+
+
+
 
 div.tooltip {   
   position: absolute;           
@@ -93,6 +159,17 @@ div.tooltip {
   pointer-events: none;         
 }
 
+
+
+
+
+.x.label{
+  font-weight: bold;
+}
+
+.y.label{
+  font-weight: bold;
+}
 
 
 
